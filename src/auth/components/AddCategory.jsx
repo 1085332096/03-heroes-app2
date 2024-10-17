@@ -1,15 +1,18 @@
+//Barra buscar:permite al usuario escribir texto en un campo de entrada y, al enviar
+// el formulario, valida que el texto no esté vacío ni contenga solo espacios.
+//lo envia a onNewCategory 
 import { useState } from 'react'; 
-// Importamos el hook useState para manejar el estado local dentro del componente.
+// Importamos el hook useState 
 
-// Recibimos la propiedad onNewCategory desde el componente padre, la cual será una función.
+// Recibimos la propiedad onNewCategory 
 export const AddCategory = ({ onNewCategory }) => {
 
     // Definimos el estado local inputValue, que almacenará el valor del input. 
-    // Inicialmente está vacío (''). setInputValue es la función que actualiza ese valor.
+    // setInputValue  función  actualiza valor.
     const [inputValue, setInputValue] = useState('');
 
     // Función que se ejecuta cuando el input cambia. 
-    // Destructuramos target del evento y obtenemos el valor del input para actualizar el estado.
+    //  target obtenemos el valor del input para actualizar el estado.
     const onInputChange = ( { target } ) =>{
         // Actualizamos el valor del input con lo que el usuario escribe.
         setInputValue(target.value);
@@ -19,10 +22,10 @@ export const AddCategory = ({ onNewCategory }) => {
     const onSubmit = (event) => {
         event.preventDefault(); // Prevenimos la acción por defecto del formulario (recargar la página).
 
-        // Evaluamos que el valor del input no esté vacío ni solo contenga espacios.
+        // Evaluamos que el valor del input no esté vacío.
         if(inputValue.trim().length <= 1) return;
 
-        // Llamamos a la función onNewCategory con el valor limpio (sin espacios en blanco al inicio o al final).
+        // Llamada a la función onNewCategory con el valor limpio
         onNewCategory( inputValue.trim() );
 
         // Limpiamos el input después de enviar el formulario.
@@ -33,9 +36,7 @@ export const AddCategory = ({ onNewCategory }) => {
     return (
         <>
             <form onSubmit ={ (event) => onSubmit(event)}>
-                {/* Input de texto que tiene un placeholder "Buscar imágenes", 
-                su valor es controlado por el estado inputValue. 
-                Cuando cambia el valor del input, ejecuta la función onInputChange. */}
+
                 <input
                     type="text"
                     placeholder="Buscar imagenes"

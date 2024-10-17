@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const HeroCard = ({
     id,
     superhero,
-    image,           // Ahora recibimos la URL de la imagen desde la API
+    image,          
     alter_ego,
     first_appearance,
     characters,

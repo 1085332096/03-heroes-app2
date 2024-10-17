@@ -4,25 +4,21 @@ h1 {
 body {
   background-color: #e4dfde; /* Cambia el color a tu preferencia */
 }
-
-
-/* Estilos para la barra de navegación */
+/*  barra de navegación */
 .navbar {
-  background-color: white; /* Fondo blanco */
-  border: 2px solid #ebd211; /* Borde amarillo */
-  border-radius: 5px; /* Bordes redondeados */
+  border: 3px solid #fa0519; 
+  border-radius: 8px; 
   padding: 10px; /* Espaciado interno */
 }
 
 /* Estilos para los enlaces de la barra de navegación */
 .navbar-nav .nav-link {
-  color: #ebd211; /* Letras amarillas */
+  color: #fad101; /* Letras amarillas */
   transition: color 0.3s; /* Efecto de transición al pasar el mouse */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffcc00; /* Color más claro al pasar el mouse (opcional) */
-}
+  color: #b3f943; 
 
 /* Estilo para el botón de logout */
 .btn {
@@ -33,17 +29,9 @@ body {
 }
 
 .btn:hover {
-  color: #ffcc00; /* Color más claro al pasar el mouse (opcional) */
+  color: #ffcc00;
 }
-
 /* Estilo para el título de la aplicación */
 .navbar-nav .text-primary {
-  color: #ebd211; /* Letras amarillas */
-}
-
-.Dc-page {
-  background-color: #0887f6; /* Color de fondo específico */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados (opcional) */
-  /* Agrega más estilos aquí según lo que necesites */
+  color: #df1c1c; /* Letras amarillas */
 }
